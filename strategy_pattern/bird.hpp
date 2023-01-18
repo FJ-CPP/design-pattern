@@ -42,8 +42,8 @@
 
 class Bird {
 public: 
-  virtual void fly() {};
-  virtual void chirp() {};
+  virtual void fly() = 0;
+  virtual void chirp() = 0;
 
 protected:
   std::shared_ptr<FlyBehavior> fly_behavior_;

@@ -2,22 +2,23 @@
 #include "bird.hpp"
 
 int main() {
-  Parrot parrot;
+  std::shared_ptr<Bird> bird;
+  bird = std::make_shared<Parrot>();
   std::cout << "Parrot says : " << std::endl;
-  parrot.chirp();
-  parrot.fly();
+  bird->chirp();
+  bird->fly();
   std::cout << "--------------" << std::endl;
 
-  Sparrow sparrow;
+  bird = std::make_shared<Sparrow>();
   std::cout << "Sparrow says : " << std::endl;
-  sparrow.chirp();
-  sparrow.fly();
+  bird->chirp();
+  bird->fly();
   std::cout << "--------------" << std::endl;
 
-  ToyBird toy_bird;
+  bird = std::make_shared<ToyBird>();
   std::cout << "ToyBird says : " << std::endl;
-  toy_bird.chirp();
-  toy_bird.fly();
+  bird->chirp();
+  bird->fly();
   std::cout << "--------------" << std::endl;
   
   return 0;
